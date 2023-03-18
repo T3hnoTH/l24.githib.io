@@ -7,5 +7,21 @@
 </head>
 <body>
     <h1>l24</h1>
+    <canvas id="imgCanvas" width="600" height="400" onclick="draw(event)"></canvas>
+
+    <script>
+        function draw(event) {
+            var canvas = document.getElementById("imgCanvas");
+            var ctx = canvas.getContext("2d");
+            var ract = canvas.getBoundingClientRect();
+            var posx = event.clientX - rect.left;
+            var posy = event.clientY - rect.top;
+
+            ctx.fillStyle = "#aaffaa";
+            ctx.beginPath();
+            ctx.arc(posx,posy,50,0,math.PI * 2);
+            ctx.fill;
+        }
+    </script>
 </body>
 </html>
