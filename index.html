@@ -27,6 +27,9 @@
             var rect = canvas.getBoundingClientRect();
             var posx = event.clientX - rect.left;
             var posy = event.clientY - rect.top;
+            ctx.beginPath();
+            ctx.fillRect(0,0,600,400);
+            ctx.fill();
 
             //ctx.fillStyle = "#aaffaa";
             ctx.fillStyle = randColor() + "33";
